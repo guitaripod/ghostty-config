@@ -1,0 +1,45 @@
+name: Update README
+
+on:
+  push:
+    paths:
+      - 'config'
+    branches:
+      - master
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      
+    - name: Generate README
+      run: |
+        # Create README header
+        cat > README.md << 'EOF'
+        # Ghostty Configuration
+        
+        My personal Ghostty terminal configuration.
+        
+        ## Current Configuration
+        
+        ```ini
+        EOF
+        
+        # Append config file content
+        cat config >> README.md
+        
+        # Close code block and add footer
+        echo '```' >> README.md
+        
+        # Add timestamp of last update
+        echo -e "\n## Last Updated" >> README.md
+        echo "$(date '+%Y-%m-%d %H:%M:%S UTC')" >> README.md
+
+    - name: Commit README if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git diff --quiet && git diff --staged --quiet || (git commit -m "docs: update README with latest config [skip ci]" && git push)
