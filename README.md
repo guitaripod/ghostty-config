@@ -1,114 +1,55 @@
 # Ghostty Configuration
 
-My personal Ghostty terminal configuration with automatic light/dark theme switching.
+My personal Ghostty terminal configuration.
 
-## Features
+## Current Configuration
 
-- **Automatic theme switching** based on system light/dark mode
-- **Rose Pine themes** (Dawn for light, standard for dark)
-- **JetBrains Mono font** at 14pt
-- **Comfortable padding** for better readability
-- **Linux-friendly keybindings** using Ctrl instead of Super/Cmd
+```ini
+# Ghostty Configuration File
 
-## Installation on Arch Linux
+# Font settings
+font-family = "JetBrains Mono"
+font-size = 14
 
-### 1. Install Ghostty
+# Theme - automatically switches based on system light/dark mode
+# Option 1: Rose Pine (soft, pleasant colors)
+theme = light:rose-pine-dawn,dark:rose-pine
 
-```bash
-# Install from AUR (using yay)
-yay -S ghostty-git
+# Option 2: Catppuccin (modern, popular theme)
+# theme = light:catppuccin-latte,dark:catppuccin-mocha
 
-# Or using paru
-paru -S ghostty-git
+# Option 3: Tokyo Night (vibrant colors)
+# theme = light:tokyonight-day,dark:tokyonight
 
-# Or manually from AUR
-git clone https://aur.archlinux.org/ghostty-git.git
-cd ghostty-git
-makepkg -si
-```
+# Option 4: Nord (cool, arctic-inspired)
+# theme = light:nord-light,dark:nord
 
-### 2. Clone this configuration
+# Option 5: Dracula (high contrast)
+# theme = light:GitHub Light,dark:Dracula
 
-```bash
-# Clone the repository
-git clone git@github.com:marcusziade/ghostty-config.git
+# Window settings
+window-padding-x = 10
+window-padding-y = 10
 
-# Create the config directory if it doesn't exist
-mkdir -p ~/.config/ghostty
+# Cursor
+cursor-style = block
+cursor-style-blink = true
 
-# Copy the config file
-cp ghostty-config/config ~/.config/ghostty/config
-```
+# Shell
+command = /bin/bash
 
-### 3. Install JetBrains Mono font (if not already installed)
+# Other settings
+copy-on-select = true
+confirm-close-surface = true
 
-```bash
-# Install via pacman
-sudo pacman -S ttf-jetbrains-mono
+# Keybindings - Using Ctrl for Linux compatibility
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+keybind = ctrl+shift+n=new_window
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_surface
+keybind = ctrl+shift+q=quit
+keybind = ctrl+shift+f=toggle_fullscreen```
 
-# Or install the Nerd Font version for additional icons
-yay -S ttf-jetbrains-mono-nerd
-```
-
-### 4. Launch Ghostty
-
-```bash
-ghostty
-```
-
-## Alternative Theme Options
-
-The config includes several commented-out theme options you can try:
-
-1. **Catppuccin** - Modern and popular
-   ```
-   theme = light:catppuccin-latte,dark:catppuccin-mocha
-   ```
-
-2. **Tokyo Night** - Vibrant colors
-   ```
-   theme = light:tokyonight-day,dark:tokyonight
-   ```
-
-3. **Nord** - Cool, arctic-inspired
-   ```
-   theme = light:nord-light,dark:nord
-   ```
-
-4. **Dracula/GitHub Light** - High contrast
-   ```
-   theme = light:GitHub Light,dark:Dracula
-   ```
-
-To use a different theme, just uncomment the line you want and comment out the current theme.
-
-## Customization
-
-- **Font size**: Change `font-size = 14` to your preferred size
-- **Padding**: Adjust `window-padding-x` and `window-padding-y`
-- **Shell**: The config uses bash by default. Change `command = /bin/bash` to your preferred shell (e.g., `/bin/zsh`, `/usr/bin/fish`)
-
-## Keybindings
-
-All keybindings use `Ctrl+Shift` for Linux compatibility:
-
-- `Ctrl+Shift+C` - Copy
-- `Ctrl+Shift+V` - Paste
-- `Ctrl+Shift+N` - New window
-- `Ctrl+Shift+T` - New tab
-- `Ctrl+Shift+W` - Close current tab/window
-- `Ctrl+Shift+Q` - Quit Ghostty
-- `Ctrl+Shift+F` - Toggle fullscreen
-
-## Troubleshooting
-
-If Ghostty doesn't pick up the configuration:
-
-1. Ensure the config is in the correct location: `~/.config/ghostty/config`
-2. Check for syntax errors: `ghostty +validate-config`
-3. View the current configuration: `ghostty +show-config`
-
-## Notes
-
-- On macOS, Ghostty may use `~/Library/Application Support/com.mitchellh.ghostty/config` instead
-- The theme switching requires your desktop environment to properly report light/dark mode to applications
+## Last Updated
+2025-06-18 17:53:30 UTC
