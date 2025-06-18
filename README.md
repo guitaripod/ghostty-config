@@ -6,7 +6,7 @@ My personal [Ghostty](https://ghostty.org) terminal configuration with automatic
 
 - 🌓 **Automatic theme switching** - Solarized Light for day, Rose Pine for night
 - 📖 **Enhanced readability** - Minimum contrast ratio of 3.0 for better code visibility
-- 🔤 **JetBrains Mono font** - Beautiful programming font with ligatures
+- 🔤 **FiraCode Nerd Font** - Programming font with ligatures and icons
 - 🎨 **Multiple theme options** - Pre-configured alternatives ready to use
 
 ## Current Configuration
@@ -15,7 +15,7 @@ My personal [Ghostty](https://ghostty.org) terminal configuration with automatic
 # Ghostty Configuration File
 
 # Font settings
-font-family = "JetBrains Mono"
+font-family = "FiraCode Nerd Font Mono"
 font-size = 14
 
 # Theme - automatically switches based on system light/dark mode
@@ -60,25 +60,21 @@ confirm-close-surface = true
 
 ### Prerequisites - Font Installation
 
-This configuration uses JetBrains Mono font. Install it first:
+This configuration uses FiraCode Nerd Font. Install it first:
 
 #### macOS
 ```bash
 # Using Homebrew
 brew tap homebrew/cask-fonts
-brew install --cask font-jetbrains-mono
-
-# Or install the Nerd Font version for extra glyphs
-brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask font-fira-code-nerd-font
 ```
 
 #### Arch Linux
 ```bash
-# Standard version
-sudo pacman -S ttf-jetbrains-mono
-
-# Or Nerd Font version from AUR
-yay -S ttf-jetbrains-mono-nerd
+# From AUR
+yay -S ttf-firacode-nerd
+# or
+paru -S ttf-firacode-nerd
 ```
 
 ### Installing Ghostty
@@ -169,7 +165,7 @@ The config includes several pre-configured theme combinations. To switch themes,
 Verify font installation:
 ```bash
 # List available fonts
-ghostty +list-fonts | grep -i jetbrains
+ghostty +list-fonts | grep -i fira
 ```
 
 ### Theme issues?

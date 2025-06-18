@@ -1,7 +1,7 @@
 # Ghostty Configuration File
 
 # Font settings
-font-family = "JetBrains Mono"
+font-family = "FiraCode Nerd Font Mono"
 font-size = 14
 
 # Theme - automatically switches based on system light/dark mode
