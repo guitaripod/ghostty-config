@@ -39,5 +39,5 @@ command = /bin/bash
 
 # Other settings
 copy-on-select = true
-confirm-close-surface = true
+confirm-close-surface = false
 
