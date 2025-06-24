@@ -2,7 +2,7 @@
 
 # Font settings
 font-family = "FiraCode Nerd Font Mono"
-font-size = 14
+font-size = 12
 
 # Theme - automatically switches based on system light/dark mode
 # Solarized Light with custom palette for better diff readability
