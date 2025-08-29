@@ -43,6 +43,5 @@ confirm-close-surface = false
 
 # Keybindings
 keybind = ctrl+shift+o=new_split:right
-keybind = ctrl+shift+h=new_split:down
-keybind = ctrl+shift+c=close_surface
+keybind = ctrl+shift+h=close_surface
 
