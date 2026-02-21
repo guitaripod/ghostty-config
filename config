@@ -14,7 +14,7 @@ window-padding-x = 12
 window-padding-y = 10
 window-padding-color = extend
 window-colorspace = display-p3
-window-decoration = none
+window-decoration = server
 
 cursor-style = block
 cursor-style-blink = true
