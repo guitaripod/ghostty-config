@@ -4,7 +4,7 @@ font-thicken = true
 font-feature = calt
 font-feature = liga
 
-theme = light:Builtin Solarized Light,dark:Rose Pine
+theme = light:iTerm2 Solarized Light,dark:Rose Pine
 minimum-contrast = 3.0
 
 background-opacity = 0.88
