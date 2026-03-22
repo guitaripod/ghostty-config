@@ -32,3 +32,5 @@ keybind = ctrl+shift+o=new_split:right
 keybind = ctrl+shift+h=close_surface
 keybind = ctrl+shift+l=new_split:down
 keybind = shift+enter=text:\x1b\r
+
+config-file = local
